@@ -9,7 +9,7 @@
   "private": true,
   "scripts": {
     "build": "webpack --config webpack.config.prod.js",
-    "start": "webpack-dev-server --mode development --config webpack.config.dev.js --open",
+    "start": "webpack-dev-server --mode development --config webpack.config.dev.js",
     "commit": "commit",
     "lint": "run-p lint:*",
     "lint:eslint": "eslint --ext .js .",
