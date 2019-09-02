@@ -1,5 +1,5 @@
 /*
-  Content-Security-Policy: default-src 'none'; script-src 'self'; connect-src 'self'; img-src 'self'; style-src 'self';
+  Content-Security-Policy: default-src 'none'; script-src 'self'; connect-src 'self'; img-src 'self' data:; style-src 'self'; font-src 'self';
   Feature-Policy: accelerometer 'none'; ambient-light-sensor 'none'; autoplay 'none'; camera 'none'; encrypted-media 'none'; fullscreen 'self'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; payment 'none';  picture-in-picture 'none'; speaker 'none'; sync-xhr 'none'; usb 'none'; vr 'none';
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
@@ -7,4 +7,13 @@
   X-Content-Type-Options: nosniff
 
 /*.js
+  Cache-Control: max-age=31536000, public
+
+/*.svg
+  Cache-Control: max-age=31536000, public
+
+/*.woff
+  Cache-Control: max-age=31536000, public
+
+/*.woff2
   Cache-Control: max-age=31536000, public
