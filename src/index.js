@@ -2,12 +2,16 @@ import './main.css';
 
 async function loadCriticalPathResources() {
   // Load Roboto font
-  import('../static/fonts/roboto/roboto.css');
+  import(/* webpackPreload: true */ '../static/fonts/roboto/roboto.css');
 
-  const { default: emailIcon } = await import('../static/icons/email.svg');
-  const { default: homeIcon } = await import('../static/icons/home.svg');
+  const { default: emailIcon } = await import(
+    /* webpackPreload: true */ '../static/icons/email.svg'
+  );
+  const { default: homeIcon } = await import(
+    /* webpackPreload: true */ '../static/icons/home.svg'
+  );
   const { default: linkedinIcon } = await import(
-    '../static/icons/linkedin.svg'
+    /* webpackPreload: true */ '../static/icons/linkedin.svg'
   );
 
   /* globals document:false */
@@ -16,4 +20,4 @@ async function loadCriticalPathResources() {
   document.getElementById('linkedinIcon').src = linkedinIcon;
 }
 
-loadCriticalPathResources();
+setTimeout(loadCriticalPathResources, 20);
