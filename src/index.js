@@ -1,5 +1,8 @@
 import './main.css';
 
+// eslint-disable-next-line no-console
+console.log('jvega.dev: Under construction. Coming soon...');
+
 async function loadCriticalPathResources() {
   // Load Roboto font
   import(/* webpackPreload: true */ '../static/fonts/roboto/roboto.css');

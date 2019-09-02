@@ -87,6 +87,11 @@ h6 {
   box-sizing: border-box;
 }
 
+.under-constraction-msg {
+  flex: none;
+  padding: 24px;
+}
+
 /*
   ##Device = Desktops
   ##Screen = 1281px to higher resolution desktops
@@ -146,5 +151,10 @@ h6 {
 
   .contact-line {
     padding: 4px 0;
+  }
+
+  .under-constraction-msg {
+    flex: none;
+    padding: 24px 12px;
   }
 }
