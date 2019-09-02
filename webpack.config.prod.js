@@ -1,6 +1,8 @@
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const TerserJSPlugin = require('terser-webpack-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const merge = require('webpack-merge');
 const baseConfig = require('./webpack.config.base.js');
 
@@ -10,6 +12,10 @@ const {
 
 module.exports = merge(baseConfig, {
   mode: 'production',
+
+  optimization: {
+    minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})],
+  },
 
   plugins: [
     new CleanWebpackPlugin(),

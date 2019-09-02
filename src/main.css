@@ -1,0 +1,160 @@
+/*
+  --accent-color: #5addf3;
+  --accent-backgroud-color: #0B8296;
+  --page-background-color: #191919;
+  --content-background-color: #525659;
+  --text-color: #ffffff;
+*/
+
+html {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #191919;
+  color: #fff;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  height: 100%;
+}
+
+a,
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: #fcfce3;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: normal;
+}
+
+.main-navigation {
+  flex: none;
+}
+
+.main-header {
+  background-color: #0b8296;
+  display: flex;
+  justify-content: center;
+  padding: 24px;
+  height: 150px;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.name-title-container {
+  padding: 0 24px 0 0;
+}
+
+.name-title-container h1 {
+  padding: 0 0 4px 0;
+}
+
+.contact-info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px;
+  background-color: #525659;
+}
+
+.contact-line {
+  display: flex;
+}
+
+.contact-line a {
+  padding: 4px 8px;
+  height: 24px;
+  box-sizing: border-box;
+}
+
+.under-constraction-msg {
+  flex: none;
+  padding: 24px;
+}
+
+/*
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+}
+
+/*
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+}
+
+/*
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+
+/*
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+}
+
+/*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 481px) and (max-width: 767px),
+  (min-width: 320px) and (max-width: 480px) {
+  .main-header {
+    padding: 12px;
+    height: auto;
+  }
+
+  .header-container {
+    flex-direction: column;
+  }
+
+  .contact-info-container {
+    margin-top: 16px;
+    padding: 12px;
+  }
+
+  .contact-line {
+    padding: 4px 0;
+  }
+
+  .under-constraction-msg {
+    flex: none;
+    padding: 24px 12px;
+  }
+}
