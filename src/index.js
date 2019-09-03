@@ -1,3 +1,4 @@
+/* globals document:false */
 import './main.css';
 
 // eslint-disable-next-line no-console
@@ -17,10 +18,19 @@ async function loadCriticalPathResources() {
     /* webpackPreload: true */ '../static/icons/linkedin.svg'
   );
 
-  /* globals document:false */
   document.getElementById('emailIcon').src = emailIcon;
   document.getElementById('homeIcon').src = homeIcon;
   document.getElementById('linkedinIcon').src = linkedinIcon;
 }
 
+async function loadNonCriticalResources() {
+  const { default: githubIcon } = await import('../static/icons/github.svg');
+
+  const githubIconEle = document.getElementById('githubIcon');
+  githubIconEle.src = githubIcon;
+  document.querySelector('.main-navigation').classList.remove('hidden');
+}
+
+// Bootstrap
 setTimeout(loadCriticalPathResources, 20);
+setTimeout(loadNonCriticalResources, 200);

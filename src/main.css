@@ -6,6 +6,10 @@
   --text-color: #ffffff;
 */
 
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
 html {
   height: 100%;
   font-family: 'Roboto', sans-serif;
@@ -46,6 +50,14 @@ h6 {
 
 .main-navigation {
   flex: none;
+  height: 56px;
+  padding: 12px 24px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.main-navigation.hidden {
+  visibility: hidden;
 }
 
 .main-header {
@@ -53,7 +65,7 @@ h6 {
   display: flex;
   justify-content: center;
   padding: 24px;
-  height: 150px;
+  height: 200px;
 }
 
 .header-container {
@@ -84,7 +96,6 @@ h6 {
 .contact-line a {
   padding: 4px 8px;
   height: 24px;
-  box-sizing: border-box;
 }
 
 .under-constraction-msg {
