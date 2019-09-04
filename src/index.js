@@ -1,4 +1,3 @@
-/* globals document:false */
 import './main.css';
 
 // eslint-disable-next-line no-console
@@ -23,14 +22,12 @@ async function loadCriticalPathResources() {
   document.getElementById('linkedinIcon').src = linkedinIcon;
 }
 
-async function loadNonCriticalResources() {
-  const { default: githubIcon } = await import('../static/icons/github.svg');
-
-  const githubIconEle = document.getElementById('githubIcon');
-  githubIconEle.src = githubIcon;
-  document.querySelector('.main-navigation').classList.remove('hidden');
-}
-
 // Bootstrap
+
+// Delay loading icons as are not critical for the user experience. I aim
+// to reduce the time to first content paint.
 setTimeout(loadCriticalPathResources, 20);
-setTimeout(loadNonCriticalResources, 200);
+
+document.addEventListener('DOMContentLoaded', () => {
+  import('./App.jsx');
+});
