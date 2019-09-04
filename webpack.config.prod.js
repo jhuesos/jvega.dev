@@ -4,8 +4,12 @@ const CopyPlugin = require('copy-webpack-plugin');
 const TerserJSPlugin = require('terser-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const merge = require('webpack-merge');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const { env } = require('process');
+
 const baseConfig = require('./webpack.config.base.js');
 
+const { ANALYZE_BUNDLE: isAnalyzeBundleEnabled } = env;
 const {
   output: { path: outputPath },
 } = baseConfig;
@@ -27,10 +31,11 @@ module.exports = merge(baseConfig, {
         toType: 'file',
       },
     ]),
-  ],
+    isAnalyzeBundleEnabled && new BundleAnalyzerPlugin(),
+  ].filter(plugin => !!plugin),
 
   performance: {
-    maxAssetSize: 100000,
+    maxAssetSize: 150000,
     maxEntrypointSize: 100000,
     hints: 'error',
   },
