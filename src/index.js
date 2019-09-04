@@ -5,16 +5,18 @@ console.log('jvega.dev: Under construction. Coming soon...');
 
 async function loadCriticalPathResources() {
   // Load Roboto font
-  import(/* webpackPreload: true */ '../static/fonts/roboto/roboto.css');
+  import(
+    /* webpackPreload: true, webpackChunkName: 'roboton-font' */ '../static/fonts/roboto/roboto.css'
+  );
 
   const { default: emailIcon } = await import(
-    /* webpackPreload: true */ '../static/icons/email.svg'
+    /* webpackPreload: true, webpackChunkName: 'email-icon' */ '../static/icons/email.svg'
   );
   const { default: homeIcon } = await import(
-    /* webpackPreload: true */ '../static/icons/home.svg'
+    /* webpackPreload: true, webpackChunkName: 'home-icon' */ '../static/icons/home.svg'
   );
   const { default: linkedinIcon } = await import(
-    /* webpackPreload: true */ '../static/icons/linkedin.svg'
+    /* webpackPreload: true, webpackChunkName: 'linkedin-icon' */ '../static/icons/linkedin.svg'
   );
 
   document.getElementById('emailIcon').src = emailIcon;
@@ -29,5 +31,5 @@ async function loadCriticalPathResources() {
 setTimeout(loadCriticalPathResources, 20);
 
 document.addEventListener('DOMContentLoaded', () => {
-  import('./App.jsx');
+  import(/* webpackChunkName: 'ReactApp' */ './App.jsx');
 });
