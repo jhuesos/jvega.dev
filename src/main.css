@@ -48,7 +48,7 @@ h6 {
   font-weight: normal;
 }
 
-.main-navigation {
+.navigation-container {
   flex: none;
   height: 56px;
   padding: 12px 24px;

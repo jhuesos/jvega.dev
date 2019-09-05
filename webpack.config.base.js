@@ -15,8 +15,27 @@ module.exports = {
     runtimeChunk: 'single',
   },
 
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
+
+  stats: {
+    children: false,
+    modules: false,
+    hash: false,
+    builtAt: false,
+    version: false,
+  },
+
   module: {
     rules: [
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+        },
+      },
       {
         test: /\.css$/,
         use: [
@@ -33,7 +52,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|jp(e*)g|svg)$/,
+        test: /\.(png|jp(e*)g)$/,
         use: [
           {
             loader: 'url-loader',
@@ -45,10 +64,18 @@ module.exports = {
         ],
       },
       {
+        test: /\.svg$/,
+        loader: 'svg-url-loader',
+        options: {
+          limit: 10 * 1024,
+          noquotes: true,
+        },
+      },
+      {
         test: /\.(woff|woff2)$/,
         use: [
           {
-            loader: 'file-loader',
+            loader: 'url-loader',
             options: {
               name: 'fonts/[name].[ext]',
             },
@@ -60,8 +87,8 @@ module.exports = {
 
   plugins: [
     new MiniCssExtractPlugin({
-      filename: '[name].css',
-      chunkFilename: '[id].css',
+      filename: '[name].[contenthash].css',
+      chunkFilename: '[name].[contenthash].css',
       ignoreOrder: false, // Enable to remove warnings about conflicting order
     }),
     new HtmlWebpackPlugin({

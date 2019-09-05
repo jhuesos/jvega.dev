@@ -27,5 +27,6 @@ module.exports = merge(baseConfig, {
       key: fs.readFileSync(process.env.HTTPS_KEY_FILE),
       cert: fs.readFileSync(process.env.HTTPS_CERT_FILE),
     },
+    stats: 'minimal',
   },
 });
