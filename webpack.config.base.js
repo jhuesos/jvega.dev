@@ -19,6 +19,14 @@ module.exports = {
     extensions: ['.js', '.jsx'],
   },
 
+  stats: {
+    children: false,
+    modules: false,
+    hash: false,
+    builtAt: false,
+    version: false,
+  },
+
   module: {
     rules: [
       {
