@@ -3,7 +3,7 @@ import './main.css';
 // eslint-disable-next-line no-console
 console.log('jvega.dev: Under construction. Coming soon...');
 
-function loadNonCriticalResources() {
+function loadApp() {
   import(/* webpackChunkName: 'ReactApp' */ './App.jsx');
 }
 
@@ -28,7 +28,7 @@ async function loadCriticalPathResources() {
   document.getElementById('linkedinIcon').src = linkedinIcon;
 
   // Continue loading with the rest of the resouces
-  setTimeout(loadNonCriticalResources, 50);
+  setTimeout(loadApp, 50);
 }
 
 // Bootstrap
