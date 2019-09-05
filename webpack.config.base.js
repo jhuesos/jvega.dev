@@ -44,7 +44,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|jp(e*)g|svg)$/,
+        test: /\.(png|jp(e*)g)$/,
         use: [
           {
             loader: 'url-loader',
@@ -56,10 +56,18 @@ module.exports = {
         ],
       },
       {
+        test: /\.svg$/,
+        loader: 'svg-url-loader',
+        options: {
+          limit: 10 * 1024,
+          noquotes: true,
+        },
+      },
+      {
         test: /\.(woff|woff2)$/,
         use: [
           {
-            loader: 'file-loader',
+            loader: 'url-loader',
             options: {
               name: 'fonts/[name].[ext]',
             },

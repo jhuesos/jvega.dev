@@ -10,7 +10,7 @@
   "scripts": {
     "build": "webpack --config webpack.config.prod.js",
     "build:analyze": "ANALYZE_BUNDLE=true webpack --config webpack.config.prod.js",
-    "start": "webpack-dev-server --mode development --config webpack.config.dev.js",
+    "start": "webpack-dev-server --config webpack.config.dev.js",
     "commit": "commit",
     "lint": "run-p lint:*",
     "lint:eslint": "eslint --ext .js .",
@@ -66,6 +66,7 @@
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "prettier": "^1.18.2",
     "style-loader": "^1.0.0",
+    "svg-url-loader": "^3.0.2",
     "terser-webpack-plugin": "^1.4.1",
     "url-loader": "^2.1.0",
     "webpack": "^4.39.1",
