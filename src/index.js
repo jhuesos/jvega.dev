@@ -3,6 +3,10 @@ import './main.css';
 // eslint-disable-next-line no-console
 console.log('jvega.dev: Under construction. Coming soon...');
 
+function loadNonCriticalResources() {
+  import(/* webpackChunkName: 'ReactApp' */ './App.jsx');
+}
+
 async function loadCriticalPathResources() {
   // Load Roboto font
   import(
@@ -22,6 +26,9 @@ async function loadCriticalPathResources() {
   document.getElementById('emailIcon').src = emailIcon;
   document.getElementById('homeIcon').src = homeIcon;
   document.getElementById('linkedinIcon').src = linkedinIcon;
+
+  // Continue loading with the rest of the resouces
+  setTimeout(loadNonCriticalResources, 50);
 }
 
 // Bootstrap
@@ -29,7 +36,3 @@ async function loadCriticalPathResources() {
 // Delay loading icons as are not critical for the user experience. I aim
 // to reduce the time to first content paint.
 setTimeout(loadCriticalPathResources, 20);
-
-document.addEventListener('DOMContentLoaded', () => {
-  import(/* webpackChunkName: 'ReactApp' */ './App.jsx');
-});
