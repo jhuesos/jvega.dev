@@ -15,8 +15,7 @@ module.exports = merge(baseConfig, {
     port: 3000,
     host: '0.0.0.0',
     headers: {
-      'Content-Security-Policy':
-        "default-src 'none'; script-src 'self'; connect-src 'self'; img-src 'self' data:; style-src 'self'; font-src 'self' data:;",
+      'Content-Security-Policy': "default-src 'self'; img-src 'self' data:;",
       'X-Frame-Options': 'DENY',
       'X-XSS-Protection': '1; mode=block',
       'X-Content-Type-Options': 'nosniff',
