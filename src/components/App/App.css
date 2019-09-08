@@ -1,0 +1,129 @@
+html {
+  --accent-color: #5addf3;
+  --accent-backgroud-color: #0b8296;
+  --page-background-color: #191919;
+  --content-background-color: #525659;
+  --text-color: #ffffff;
+}
+
+.content-container,
+.navigation-container {
+  position: absolute;
+  width: 100%;
+  transition: top 1s;
+}
+
+.navigation-container {
+  top: calc(50% - 156px);
+  height: 56px;
+  padding: 12px 24px;
+  display: flex;
+  justify-content: flex-end;
+  background-color: var(--page-background-color);
+}
+
+.content-container {
+  opacity: 0;
+  padding: 24px;
+  z-index: -1;
+}
+
+/* EXPANDED STATE */
+
+.app.expanded .navigation-container {
+  position: fixed;
+  top: 0;
+}
+
+.app.expanded .content-container {
+  display: block;
+  opacity: 1;
+  top: 256px;
+  z-index: -1;
+  transition: opacity 0.5s 0.5s;
+}
+
+/* RESPONSIVE DESIGN */
+
+/*
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+/*
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1281px), (min-width: 1025px) and (max-width: 1280px) {
+  .content-container,
+  .navigation-container {
+    max-width: 1000px;
+    left: calc(50% - 500px);
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .content-container,
+  .navigation-container {
+    max-width: 1000px;
+    left: calc(50% - 500px);
+  }
+}
+
+/*
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+
+/*
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+}
+
+/*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 481px) and (max-width: 767px),
+  (min-width: 320px) and (max-width: 480px) {
+  .navigation-container {
+    top: calc(50% - 221px);
+  }
+
+  .app.expanded .content-container {
+    top: 286px;
+  }
+}
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .navigation-container {
+    top: calc(50% - 185px);
+    padding: 12px;
+  }
+
+  .content-container {
+    padding: 12px;
+  }
+
+  .app.expanded .content-container {
+    top: 314px;
+  }
+}

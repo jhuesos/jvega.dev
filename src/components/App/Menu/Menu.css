@@ -1,0 +1,32 @@
+.main-navigation.hidden {
+  visibility: hidden;
+}
+
+.main-navigation a {
+  margin-left: 16px;
+}
+
+.main-navigation a:hover, a:active {
+  text-decoration: underline;
+}
+
+.main-navigation a.active {
+  font-weight: bold;
+}
+
+.main-navigation img {
+  width: 32px;
+  height: 32px;
+}
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .main-navigation img {
+    width: 24px;
+    height: 24px;
+  }
+}
