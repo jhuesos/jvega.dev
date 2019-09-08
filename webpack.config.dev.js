@@ -10,6 +10,7 @@ module.exports = merge(baseConfig, {
   devtool: 'cheap-source-map',
 
   devServer: {
+    historyApiFallback: true,
     open: false,
     port: 3000,
     host: '0.0.0.0',
