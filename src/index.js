@@ -1,34 +1,33 @@
+import 'core-js';
 import './main.css';
 
-// eslint-disable-next-line no-console
-console.log('jvega.dev: Under construction. Coming soon...');
-
 function loadApp() {
-  import(/* webpackChunkName: 'ReactApp' */ './App.jsx');
+  import(/* webpackChunkName: 'ReactApp' */ './components/App');
 }
 
-async function loadCriticalPathResources() {
-  // Load Roboto font
-  import(
-    /* webpackPreload: true, webpackChunkName: 'roboton-font' */ '../static/fonts/roboto/roboto.css'
-  );
+function loadCriticalPathResources() {
+  Promise.all([
+    import(
+      /* webpackPreload: true, webpackChunkName: 'email-icon' */ '../static/icons/email.svg'
+    ),
+    import(
+      /* webpackPreload: true, webpackChunkName: 'home-icon' */ '../static/icons/home.svg'
+    ),
+    import(
+      /* webpackPreload: true, webpackChunkName: 'linkedin-icon' */ '../static/icons/linkedin.svg'
+    ),
+  ]).then(function onSvgIconsLoaded([
+    { default: emailIcon },
+    { default: homeIcon },
+    { default: linkedinIcon },
+  ]) {
+    document.getElementById('emailIcon').src = emailIcon;
+    document.getElementById('homeIcon').src = homeIcon;
+    document.getElementById('linkedinIcon').src = linkedinIcon;
 
-  const { default: emailIcon } = await import(
-    /* webpackPreload: true, webpackChunkName: 'email-icon' */ '../static/icons/email.svg'
-  );
-  const { default: homeIcon } = await import(
-    /* webpackPreload: true, webpackChunkName: 'home-icon' */ '../static/icons/home.svg'
-  );
-  const { default: linkedinIcon } = await import(
-    /* webpackPreload: true, webpackChunkName: 'linkedin-icon' */ '../static/icons/linkedin.svg'
-  );
-
-  document.getElementById('emailIcon').src = emailIcon;
-  document.getElementById('homeIcon').src = homeIcon;
-  document.getElementById('linkedinIcon').src = linkedinIcon;
-
-  // Continue loading with the rest of the resouces
-  setTimeout(loadApp, 50);
+    // Continue loading with the rest of the resouces
+    setTimeout(loadApp, 100);
+  });
 }
 
 // Bootstrap
