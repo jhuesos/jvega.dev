@@ -35,8 +35,8 @@ module.exports = merge(baseConfig, {
   ].filter(plugin => !!plugin),
 
   performance: {
-    maxAssetSize: 150000,
-    maxEntrypointSize: 100000,
+    maxAssetSize: 175000,
+    maxEntrypointSize: 175000,
     hints: 'error',
   },
 });
