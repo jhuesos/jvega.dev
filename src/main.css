@@ -44,6 +44,10 @@ h6 {
   font-weight: normal;
 }
 
+address {
+  font-style: normal;
+}
+
 /* HEADER SECTION */
 .main-header {
   display: flex;
