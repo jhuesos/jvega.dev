@@ -3,11 +3,11 @@ import './Theme.css';
 import './main.css';
 
 function loadApp() {
-  import(/* webpackChunkName: 'ReactApp' */ './components/App');
-
-  if (document.location.pathname !== '/') {
-    document.body.classList.add('expanded');
-  }
+  import(/* webpackChunkName: 'ReactApp' */ './components/App').then(() => {
+    if (document.location.pathname !== '/') {
+      document.body.classList.add('expanded');
+    }
+  });
 }
 
 function loadCriticalPathResources() {
@@ -35,7 +35,10 @@ function loadCriticalPathResources() {
   });
 }
 
-// Bootstrap
+// // Bootstrap
+// if (document.location.pathname !== '/') {
+//   document.body.classList.add('expanded');
+// }
 
 // Delay loading icons as are not critical for the user experience. I aim
 // to reduce the time to first content paint.
