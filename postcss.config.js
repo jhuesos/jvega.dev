@@ -1,5 +1,9 @@
+const path = require('path');
+
 module.exports = {
   plugins: {
-    'postcss-css-variables': {},
+    'postcss-custom-properties': {
+      importFrom: [path.join(__dirname, './src/Theme.css')],
+    },
   },
 };
