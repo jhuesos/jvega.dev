@@ -40,13 +40,13 @@ const App = () => {
           </Suspense>
         )}
       </div>
-      <div className="content-container">
+      <main className="content-container">
         {isAppLoaded && (
           <Suspense fallback={null}>
             <ContentContainer />
           </Suspense>
         )}
-      </div>
+      </main>
     </div>
   );
 };

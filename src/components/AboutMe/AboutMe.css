@@ -1,0 +1,48 @@
+.about-me {
+  display: flex;
+}
+
+.about-me .education-experience-container {
+  padding: 24px;
+  margin-right: 0;
+  flex: 8 1;
+  background-color: var(--content-background-color);
+}
+
+.about-me .skills-container {
+  flex: 4 1;
+  padding: 0 0 0 24px;
+}
+
+.about-me .profile-pic-container {
+  padding: 16px 16px 16px 0;
+}
+
+.about-me .profile-pic-container img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.disclaimer {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  margin-top: 24px;
+  background-color: var(--accent-backgroud-color);
+}
+
+.disclaimer .exclamation {
+  font-size: 12rem;
+  padding: 0 16px 0 0;
+  font-weight: bold;
+}
+
+.disclaimer .msg {
+  font-size: 1.8rem;
+}
+
+@media (min-width: 320px) and (max-width: 500px) {
+  .about-me {
+    flex-direction: column;
+  }
+}

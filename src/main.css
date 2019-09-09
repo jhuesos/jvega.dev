@@ -7,19 +7,21 @@
 html {
   height: 100%;
   font-family: 'Roboto', sans-serif;
-
-  --accent-color: #5addf3;
-  --accent-backgroud-color: #0b8296;
-  --page-background-color: #191919;
-  --content-background-color: #525659;
-  --text-color: #ffffff;
+  font-size: 62.5%;
 }
 
 body {
   background-color: var(--page-background-color);
   color: var(--text-color);
   margin: 0;
-  height: 100%;
+  font-size: 1.6rem;
+}
+
+a,
+a:link,
+a:visited,
+a:active {
+  color: var(--text-color);
 }
 
 a,
@@ -27,11 +29,18 @@ a:link,
 a:visited,
 a:active {
   text-decoration: none;
-  color: #fcfce3;
 }
 
-a:hover {
+a {
+  text-decoration: line-through;
+}
+
+a[href]:hover {
   text-decoration: underline;
+}
+
+a:not([href]):hover {
+  cursor: not-allowed;
 }
 
 h1,
@@ -42,6 +51,10 @@ h5,
 h6 {
   margin: 0;
   font-weight: normal;
+}
+
+p {
+  margin: 0;
 }
 
 address {
@@ -91,16 +104,10 @@ address {
   height: 24px;
 }
 
-.under-constraction-msg {
-  padding: 24px;
-}
-
 /* EXPANDED STATE */
 
 body.expanded .main-header {
-  position: fixed;
   top: 56px;
-  transition: top 1s;
 }
 
 /* RESPONSIVE DESIGN */
@@ -136,7 +143,6 @@ body.expanded .main-header {
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
 }
-
 /*
   ##Device = Low Resolution Tablets, Mobiles (Landscape)
   ##Screen = B/w 481px to 767px
@@ -148,20 +154,9 @@ body.expanded .main-header {
 */
 
 @media (min-width: 481px) and (max-width: 767px),
-  (min-width: 320px) and (max-width: 480px) {
-  .main-header {
-    padding: 12px;
-    height: 230px;
-    top: calc(50% - 165px);
-  }
-
+  (min-width: 320px) and (max-width: 500px) {
   .header-container {
-    flex-direction: column;
-  }
-
-  .contact-info-container {
-    margin-top: 16px;
-    padding: 12px;
+    width: 100%;
   }
 
   .contact-line {
@@ -173,11 +168,19 @@ body.expanded .main-header {
   ##Device = Most of the Smartphones Mobiles (Portrait)
   ##Screen = B/w 320px to 479px
 */
-
-@media (min-width: 320px) and (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 500px) {
   .main-header {
     padding: 12px;
     height: 258px;
     top: calc(50% - 129px);
+  }
+
+  .header-container {
+    flex-direction: column;
+  }
+
+  .contact-info-container {
+    margin-top: 16px;
+    padding: 12px;
   }
 }

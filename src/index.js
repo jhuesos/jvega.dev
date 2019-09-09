@@ -1,8 +1,13 @@
 import 'core-js';
+import './Theme.css';
 import './main.css';
 
 function loadApp() {
   import(/* webpackChunkName: 'ReactApp' */ './components/App');
+
+  if (document.location.pathname !== '/') {
+    document.body.classList.add('expanded');
+  }
 }
 
 function loadCriticalPathResources() {
