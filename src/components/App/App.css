@@ -30,14 +30,16 @@
   padding: 12px 24px;
   display: flex;
   justify-content: flex-end;
+  z-index: 1;
   background-color: var(--page-background-color);
 }
 
 .content-container {
   opacity: 0;
-  padding: 16px;
+  padding: 16px 16px 16px 0;
   z-index: -1;
   transition: opacity 0.5s 0.75s;
+  max-width: 1000px;
 }
 
 /* EXPANDED STATE */
@@ -56,23 +58,13 @@
 
 /* RESPONSIVE DESIGN */
 
-@media (min-width: 1281px), (min-width: 1025px) and (max-width: 1280px) {
-  .content-container,
-  .main-navigation {
-    max-width: 1000px;
+@media (min-width: 1000px) {
+  .content-container {
     left: calc(50% - 500px);
   }
 }
 
-@media (min-width: 1025px) and (max-width: 1280px) {
-  .content-container,
-  .main-navigation {
-    max-width: 1000px;
-    left: calc(50% - 500px);
-  }
-}
-
-@media (min-width: 481px) and (max-width: 767px),
+@media (min-width: 501px) and (max-width: 767px),
   (min-width: 320px) and (max-width: 500px) {
   .app.expanded .content-container {
     top: 256px;
@@ -86,7 +78,7 @@
   }
 
   .content-container {
-    padding: 12px;
+    padding: 12px 0;
   }
 
   .app.expanded .content-container {

@@ -5,12 +5,12 @@
 .about-me .education-experience-container {
   padding: 24px;
   margin-right: 0;
-  flex: 8 1;
+  flex: 2 1;
   background-color: var(--content-background-color);
 }
 
 .about-me .skills-container {
-  flex: 4 1;
+  flex: 1 1;
   padding: 0 0 0 24px;
 }
 
@@ -41,8 +41,37 @@
   font-size: 1.8rem;
 }
 
+@media (min-width: 501px) and (max-width: 767px) {
+  .about-me .skills-container {
+    padding: 0 0 0 16px;
+  }
+
+  .disclaimer {
+    padding: 12px;
+  }
+
+  .disclaimer .exclamation {
+    font-size: 10rem;
+    padding: 0 8px 0 0;
+  }
+}
+
 @media (min-width: 320px) and (max-width: 500px) {
   .about-me {
     flex-direction: column;
+  }
+
+  .about-me .education-experience-container {
+    padding: 12px;
+  }
+
+  .about-me .skills-container {
+    padding: 12px 12px 0 12px;
+  }
+
+  .about-me .profile-pic-container {
+    padding: 12px 0;
+    max-width: 300px;
+    margin: 0 auto;
   }
 }
