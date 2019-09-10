@@ -9,7 +9,7 @@ const Menu = lazy(() =>
   import(/* webpackPreload: true,  webpackChunkName: 'Menu' */ './Menu'),
 );
 const ContentContainer = lazy(() =>
-  import(/* webpackChunkName: 'ContentContainer' */ './ContentContainer'),
+  import(/* webpackPrefetch: true, webpackChunkName: 'ContentContainer' */ './ContentContainer'),
 );
 
 const useDocumentExpanded = () => {

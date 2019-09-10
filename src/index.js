@@ -3,7 +3,9 @@ import './Theme.css';
 import './main.css';
 
 function loadApp() {
-  import(/* webpackChunkName: 'ReactApp' */ './components/App').then(() => {
+  import(
+    /* webpackPreload: true, webpackChunkName: 'ReactApp' */ './components/App'
+  ).then(() => {
     if (document.location.pathname !== '/') {
       document.body.classList.add('expanded');
     }
