@@ -35,6 +35,11 @@ module.exports = merge(baseConfig, {
         to: path.join(outputPath, '_redirects'),
         toType: 'file',
       },
+      {
+        from: path.join(__dirname, 'robots.txt'),
+        to: path.join(outputPath, 'robots.txt'),
+        toType: 'file',
+      },
     ]),
     isAnalyzeBundleEnabled && new BundleAnalyzerPlugin(),
   ].filter(plugin => !!plugin),
