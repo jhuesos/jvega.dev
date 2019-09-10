@@ -53,7 +53,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|jp(e*)g)$/,
+        test: /\.(webp|png|jp(e*)g)$/,
         use: [
           {
             loader: 'url-loader',

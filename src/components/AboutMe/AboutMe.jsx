@@ -7,6 +7,9 @@ import './AboutMe.css';
 import profilePic200 from '../../../static/images/profile-pic-200.jpg';
 import profilePic300 from '../../../static/images/profile-pic-300.jpg';
 import profilePic400 from '../../../static/images/profile-pic-400.jpg';
+import profilePic200webp from '../../../static/images/profile-pic-200.webp';
+import profilePic300webp from '../../../static/images/profile-pic-300.webp';
+import profilePic400webp from '../../../static/images/profile-pic-400.webp';
 
 const AboutMe = () => {
   return (
@@ -106,14 +109,24 @@ const AboutMe = () => {
       </div>
       <div className="skills-container">
         <div className="profile-pic-container">
-          <img
-            src={profilePic400}
-            srcSet={`${profilePic400} 400w, ${profilePic300} 300w, ${profilePic200} 200w`}
-            // In small screens, might be displayed bigger as content is in one column. That's why
-            // from less than 500px, I use 100vw to calculate the size
-            sizes="(max-width: 500px) 100vw, 20vw"
-            alt="Jaime Vega's face"
-          />
+          <picture>
+            <source
+              type="image/webp"
+              srcSet={`${profilePic400webp} 400w, ${profilePic300webp} 300w, ${profilePic200webp} 200w`}
+              sizes="(max-width: 500px) 100vw, 20vw"
+            />
+            <source
+              type="image/jpeg"
+              srcSet={`${profilePic400} 400w, ${profilePic300} 300w, ${profilePic200} 200w`}
+              sizes="(max-width: 500px) 100vw, 20vw"
+            />
+            <img
+              src={profilePic400}
+              srcSet={`${profilePic400} 400w, ${profilePic300} 300w, ${profilePic200} 200w`}
+              sizes="(max-width: 500px) 100vw, 20vw"
+              alt="Jaime Vega's face"
+            />
+          </picture>
         </div>
         <section>
           <h2>Skills</h2>
