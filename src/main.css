@@ -1,29 +1,27 @@
-/*
-  --accent-color: #5addf3;
-  --accent-backgroud-color: #0B8296;
-  --page-background-color: #191919;
-  --content-background-color: #525659;
-  --text-color: #ffffff;
-*/
-
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
 html {
   height: 100%;
   font-family: 'Roboto', sans-serif;
+  font-size: 62.5%;
 }
 
 body {
-  background-color: #191919;
-  color: #fff;
+  background-color: var(--page-background-color);
+  color: var(--text-color);
   margin: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: stretch;
-  height: 100%;
+  font-size: 1.6rem;
+}
+
+a,
+a:link,
+a:visited,
+a:active {
+  color: var(--text-color);
 }
 
 a,
@@ -31,11 +29,18 @@ a:link,
 a:visited,
 a:active {
   text-decoration: none;
-  color: #fcfce3;
 }
 
-a:hover {
+a {
+  text-decoration: line-through;
+}
+
+a[href]:hover {
   text-decoration: underline;
+}
+
+a:not([href]):hover {
+  cursor: not-allowed;
 }
 
 h1,
@@ -48,24 +53,25 @@ h6 {
   font-weight: normal;
 }
 
-.navigation-container {
-  flex: none;
-  height: 56px;
-  padding: 12px 24px;
-  display: flex;
-  justify-content: flex-end;
+p {
+  margin: 0;
 }
 
-.main-navigation.hidden {
-  visibility: hidden;
+address {
+  font-style: normal;
 }
 
+/* HEADER SECTION */
 .main-header {
-  background-color: #0b8296;
   display: flex;
-  justify-content: center;
-  padding: 24px;
+  position: absolute;
+  top: calc(50% - 100px);
+  width: 100%;
   height: 200px;
+  padding: 24px;
+  justify-content: center;
+  background-color: var(--accent-backgroud-color);
+  transition: top 1s;
 }
 
 .header-container {
@@ -83,10 +89,10 @@ h6 {
 
 .contact-info-container {
   display: flex;
+  padding: 24px;
   flex-direction: column;
   justify-content: space-between;
-  padding: 24px;
-  background-color: #525659;
+  background-color: var(--content-background-color);
 }
 
 .contact-line {
@@ -98,10 +104,13 @@ h6 {
   height: 24px;
 }
 
-.under-constraction-msg {
-  flex: none;
-  padding: 24px;
+/* EXPANDED STATE */
+
+body.expanded .main-header {
+  top: 56px;
 }
+
+/* RESPONSIVE DESIGN */
 
 /*
   ##Device = Desktops
@@ -134,21 +143,36 @@ h6 {
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
 }
-
 /*
   ##Device = Low Resolution Tablets, Mobiles (Landscape)
   ##Screen = B/w 481px to 767px
 */
+
 /*
   ##Device = Most of the Smartphones Mobiles (Portrait)
   ##Screen = B/w 320px to 479px
 */
 
-@media (min-width: 481px) and (max-width: 767px),
-  (min-width: 320px) and (max-width: 480px) {
+@media (min-width: 501px) and (max-width: 767px),
+  (min-width: 320px) and (max-width: 500px) {
+  .header-container {
+    width: 100%;
+  }
+
+  .contact-line {
+    padding: 4px 0;
+  }
+}
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+@media (min-width: 320px) and (max-width: 500px) {
   .main-header {
     padding: 12px;
-    height: auto;
+    height: 258px;
+    top: calc(50% - 129px);
   }
 
   .header-container {
@@ -158,14 +182,5 @@ h6 {
   .contact-info-container {
     margin-top: 16px;
     padding: 12px;
-  }
-
-  .contact-line {
-    padding: 4px 0;
-  }
-
-  .under-constraction-msg {
-    flex: none;
-    padding: 24px 12px;
   }
 }

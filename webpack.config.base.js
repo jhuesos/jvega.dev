@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const PreloadWebpackPlugin = require('preload-webpack-plugin');
 
 module.exports = {
   entry: path.join(__dirname, './src/index.js'),
@@ -49,10 +50,11 @@ module.exports = {
             },
           },
           'css-loader',
+          'postcss-loader',
         ],
       },
       {
-        test: /\.(png|jp(e*)g)$/,
+        test: /\.(webp|png|jp(e*)g)$/,
         use: [
           {
             loader: 'url-loader',
@@ -93,6 +95,12 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: path.join(__dirname, './src/index.tpl.ejs'),
+    }),
+    new PreloadWebpackPlugin({
+      rel: 'preload',
+      // As these are loaded by the entrypoint, Webpack will not add the link
+      // elements to the index.html. We use this plugin to do that
+      include: ['email-icon', 'home-icon', 'home-icon', 'ReactApp', 'Menu'],
     }),
   ],
 };

@@ -1,0 +1,39 @@
+.main-navigation {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.main-navigation.hidden {
+  visibility: hidden;
+}
+
+.main-navigation a:link,
+.main-navigation a {
+  margin-left: 16px;
+}
+
+.main-navigation a[aria-current='page'] {
+  font-weight: bold;
+}
+
+.main-navigation img {
+  width: 32px;
+  height: 32px;
+}
+
+@media (min-width: 1000px) {
+  .main-navigation {
+    left: calc(50% - 500px);
+    max-width: 1000px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 500px) {
+  .main-navigation img {
+    width: 24px;
+    height: 24px;
+  }
+}

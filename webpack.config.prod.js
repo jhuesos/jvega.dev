@@ -24,10 +24,15 @@ module.exports = merge(baseConfig, {
   plugins: [
     new CleanWebpackPlugin(),
     new CopyPlugin([
-      // Netlify custom headers file
+      // Netlify custom headers file and redirects
       {
         from: path.join(__dirname, '_headers'),
         to: path.join(outputPath, '_headers'),
+        toType: 'file',
+      },
+      {
+        from: path.join(__dirname, '_redirects'),
+        to: path.join(outputPath, '_redirects'),
         toType: 'file',
       },
     ]),
@@ -35,8 +40,8 @@ module.exports = merge(baseConfig, {
   ].filter(plugin => !!plugin),
 
   performance: {
-    maxAssetSize: 150000,
-    maxEntrypointSize: 100000,
+    maxAssetSize: 175000,
+    maxEntrypointSize: 175000,
     hints: 'error',
   },
 });
