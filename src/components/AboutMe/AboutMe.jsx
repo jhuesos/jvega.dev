@@ -147,13 +147,13 @@ const AboutMe = () => {
           <h3>Personal</h3>
           <div>
             <p>Communication</p>
-            <ProgressBar percentage="30" />
+            <ProgressBar percentage="84" />
             <p>Leadership</p>
             <ProgressBar percentage="50" />
             <p>Mentorship</p>
             <ProgressBar percentage="80" />
             <p>Teamwork</p>
-            <ProgressBar percentage="20" />
+            <ProgressBar percentage="95" />
             <p>English (proficient), Spanish (native)</p>
           </div>
         </section>
