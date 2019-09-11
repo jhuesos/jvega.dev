@@ -174,7 +174,9 @@ const AboutMe = () => {
         </div>
         <section>
           <h2>Skills</h2>
-          <h3>Coding</h3>
+          <h3>
+            <strong>Coding</strong>
+          </h3>
           <div>
             <Chip label="JavaScript" />
             <Chip label="React.js" />
@@ -190,7 +192,10 @@ const AboutMe = () => {
             <Chip label="Less/SASS" />
           </div>
 
-          <h3>Personal</h3>
+          <h3>
+            <strong>Personal</strong>
+          </h3>
+
           <div>
             <p>Communication</p>
             <ProgressBar percentage="84" />
