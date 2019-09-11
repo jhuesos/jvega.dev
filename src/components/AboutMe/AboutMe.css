@@ -23,6 +23,22 @@
   border-radius: 50%;
 }
 
+.about-me h3 strong {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.about-me h2 {
+  display: flex;
+  align-items: center;
+}
+
+.about-me h2 .icon-img {
+  height: 26px;
+  width: 26px;
+  margin-right: 12px;
+}
+
 .disclaimer {
   display: flex;
   align-items: center;
@@ -32,9 +48,8 @@
 }
 
 .disclaimer .exclamation {
-  font-size: 12rem;
+  font-size: 13rem;
   padding: 0 16px 0 0;
-  font-weight: bold;
 }
 
 .disclaimer .msg {

@@ -4,12 +4,16 @@ import Chip from './Chip';
 import ProgressBar from './ProgressBar';
 
 import './AboutMe.css';
+
 import profilePic200 from '../../../static/images/profile-pic-200.jpg';
 import profilePic300 from '../../../static/images/profile-pic-300.jpg';
 import profilePic400 from '../../../static/images/profile-pic-400.jpg';
 import profilePic200webp from '../../../static/images/profile-pic-200.webp';
 import profilePic300webp from '../../../static/images/profile-pic-300.webp';
 import profilePic400webp from '../../../static/images/profile-pic-400.webp';
+
+import profileIcon from '../../../static/icons/profile.svg';
+import bookIcon from '../../../static/icons/book.svg';
 
 const AboutMe = () => {
   return (
@@ -32,7 +36,15 @@ const AboutMe = () => {
         </p>
 
         <section>
-          <h2>Job Experience</h2>
+          <h2>
+            <img
+              className="icon-img"
+              src={profileIcon}
+              aria-hidden="true"
+              alt=""
+            />
+            <span> Job Experience</span>
+          </h2>
 
           <section>
             <h3>
@@ -120,16 +132,23 @@ const AboutMe = () => {
         </section>
 
         <section>
-          <h2>Education</h2>
-          <p>
-            <h3>
-              <strong>Master’s degree in Computer Engineering</strong>
-              <br />
-              <span>
-                (University of Las Palmas de Gran Canaria. Spain. Jul 10)
-              </span>
-            </h3>
-          </p>
+          <h2>
+            <img
+              className="icon-img"
+              src={bookIcon}
+              aria-hidden="true"
+              alt=""
+            />
+            <span>Education</span>
+          </h2>
+
+          <h3>
+            <strong>Master’s degree in Computer Engineering</strong>
+            <br />
+            <span>
+              (University of Las Palmas de Gran Canaria. Spain. Jul 10)
+            </span>
+          </h3>
         </section>
       </div>
       <div className="skills-container">
