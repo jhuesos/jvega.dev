@@ -35,7 +35,10 @@ const AboutMe = () => {
           <h2>Job Experience</h2>
 
           <section>
-            <h3>FRONT-END ENGINEER CONSULTANT (ING. APR 16 – DEC 18)</h3>
+            <h3>
+              <strong>Front-End Engineer Consultant </strong>
+              <span>(ING. Apr 16 – Dec 18)</span>
+            </h3>
             <p>
               I worked remote exclusively, so I became an external consultant to
               help with architecture and strategy decision making. I also spent
@@ -45,7 +48,10 @@ const AboutMe = () => {
           </section>
 
           <section>
-            <h3>FRONT-END (TEACH LEAD) ENGINEER (ING. JAN – JUN 2019)</h3>
+            <h3>
+              <strong>Front-End Engineer / Teach Lead </strong>
+              <span>(ING. Jan – Jun 2019)</span>
+            </h3>
             <p>
               I worked as the principal developer working on maintaining the
               library of UI components and as tech lead for an organization of
@@ -60,7 +66,10 @@ const AboutMe = () => {
           </section>
 
           <section>
-            <h3>TEAM LEAD. SCRUM MASTER (THUNDERHEAD. MAR 15 – APR 16)</h3>
+            <h3>
+              <strong>Team Lead. Scrum Master </strong>
+              <span>(Thunderhead. Mar 15 – Apr 16)</span>
+            </h3>
             <p>
               As Scrum Master and team lead, I hosted all regular meetings. I
               provided and helped to improve the performance metrics and worked
@@ -70,7 +79,10 @@ const AboutMe = () => {
           </section>
 
           <section>
-            <h3>SENIOR FRONT-END ENGINEER (THUNDERHEAD. OCT 12 – APR 16) </h3>
+            <h3>
+              <strong>Senior Front-End Engineer </strong>
+              <span>(Thunderhead. Oct 12 – Apr 16)</span>
+            </h3>
             <p>
               I was one of the first UI engineers in the project working in some
               of the most complex UI components. As I was the most senior
@@ -81,7 +93,10 @@ const AboutMe = () => {
           </section>
 
           <section>
-            <h3>(LEAD) FRONT-END ENGINEER. CASENGO. OCT 11 – OCT 12</h3>
+            <h3>
+              <strong>(Lead) Front-End Engineer </strong>
+              <span>(Casengo. Oct 11 – Oct 12)</span>
+            </h3>
             <p>
               I was involved in the very early phase of the design and
               architecture of the app. I also worked as a full-stack, creating
@@ -93,8 +108,13 @@ const AboutMe = () => {
 
           <section>
             <h3>
-              FULL-STACK ENGINEER. LIVECOM. MAY 11 – OCT 12 WEB DEVELOPMENT. IT
-              SUPPORT. FEYECON NOV 10 – MAY 11
+              <strong>Full stack Engineer </strong>
+              <span>(Livecom. May 11 – Oct 12)</span>
+            </h3>
+
+            <h3>
+              <strong>Web Development. IT Support </strong>
+              <span>(Feyecon. Nov 10 – May 11)</span>
             </h3>
           </section>
         </section>
@@ -102,8 +122,13 @@ const AboutMe = () => {
         <section>
           <h2>Education</h2>
           <p>
-            Master’s degree in Computer Engineering University of Las Palmas de
-            Gran Canaria. Spain. July 2010
+            <h3>
+              <strong>Master’s degree in Computer Engineering</strong>
+              <br />
+              <span>
+                (University of Las Palmas de Gran Canaria. Spain. Jul 10)
+              </span>
+            </h3>
           </p>
         </section>
       </div>
@@ -133,15 +158,17 @@ const AboutMe = () => {
           <h3>Coding</h3>
           <div>
             <Chip label="JavaScript" />
+            <Chip label="React.js" />
             <Chip label="Node.js" />
-            <Chip label="TypeScript" />
+            <Chip label="Redux" />
             <Chip label="Vue" />
             <Chip label="Web Components" />
             <Chip label="PWA" />
+            <Chip label="HTML" />
             <Chip label="CSS" />
             <Chip label="Webpack" />
-            <Chip label="Less/SASS" />
             <Chip label="git" />
+            <Chip label="Less/SASS" />
           </div>
 
           <h3>Personal</h3>
@@ -155,6 +182,10 @@ const AboutMe = () => {
             <p>Teamwork</p>
             <ProgressBar percentage="95" />
             <p>English (proficient), Spanish (native)</p>
+            <p>
+              Love traveling, keeping up to date with new tech-trends and great
+              TV shows and movies.
+            </p>
           </div>
         </section>
 

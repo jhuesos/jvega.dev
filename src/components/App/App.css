@@ -6,10 +6,14 @@
 
 .app h3 {
   color: var(--text-color);
-  font-weight: bold;
-  text-transform: uppercase;
+
   font-size: 1.6rem;
   margin: 8px 0;
+}
+
+.app h3 strong {
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .app p {
