@@ -1,13 +1,8 @@
-import React, { Suspense, lazy } from 'react';
+import React from 'react';
 import { useRoutes } from 'hookrouter';
 
-const AboutMe = lazy(() =>
-  import(/* webpackPrefetch: true, webpackChunkName:'AboutMe' */ '../../AboutMe'),
-);
-
-const AboutThisPage = lazy(() =>
-  import(/* webpackChunkName:'AboutThisPage' */ '../../AboutThisPage'),
-);
+import AboutMe from '../../AboutMe';
+import AboutThisPage from '../../AboutThisPage';
 
 const routes = {
   '/about-me': () => <AboutMe />,
@@ -16,5 +11,5 @@ const routes = {
 
 export default function ContentContainer() {
   const match = useRoutes(routes);
-  return <Suspense fallback={null}>{match}</Suspense>;
+  return <>{match}</>;
 }

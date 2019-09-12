@@ -47,6 +47,6 @@ module.exports = merge(baseConfig, {
   performance: {
     maxAssetSize: 175000,
     maxEntrypointSize: 175000,
-    hints: 'error',
+    hints: 'warning',
   },
 });
