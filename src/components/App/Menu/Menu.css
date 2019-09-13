@@ -10,8 +10,8 @@
   visibility: hidden;
 }
 
-.main-navigation a:link,
-.main-navigation a {
+.main-navigation a,
+.main-navigation a:link {
   margin-left: 16px;
 }
 
