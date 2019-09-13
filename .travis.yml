@@ -7,8 +7,11 @@ cache:
 
 jobs:
   include:
+    - stage: test
+      script: "npm run test"
     - stage: verify
       script: "npm run verify"
 
 stages:
+  - test
   - verify
