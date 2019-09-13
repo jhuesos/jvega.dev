@@ -33,9 +33,7 @@ I am writing some blog posts about building the site. You can fine them in
 
 ## Run the site
 
-```bash
-yarn start
-```
+    yarn start
 
 ## Generate production version
 
