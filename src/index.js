@@ -38,10 +38,6 @@ function loadCriticalPathResources() {
 }
 
 // // Bootstrap
-// if (document.location.pathname !== '/') {
-//   document.body.classList.add('expanded');
-// }
-
 // Delay loading icons as are not critical for the user experience. I aim
 // to reduce the time to first content paint.
 setTimeout(loadCriticalPathResources, 20);
