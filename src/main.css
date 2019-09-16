@@ -17,10 +17,6 @@ body {
   font-size: 1.6rem;
 }
 
-a {
-  text-decoration: line-through;
-}
-
 a,
 a:link,
 a:visited,
@@ -29,7 +25,6 @@ a:active {
   text-decoration: none;
 }
 
-
 a[href]:hover {
   text-decoration: underline;
 }
@@ -37,6 +32,10 @@ a[href]:hover {
 .contact-line a {
   padding: 4px 8px;
   height: 24px;
+}
+
+a:not([href]) {
+  text-decoration: line-through;
 }
 
 a:not([href]):hover {
