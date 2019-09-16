@@ -26,7 +26,9 @@
     "analyze-build-bundle": "webpack --config webpack.config.prod.js --profile --json > .tmp/stats.json && webpack-bundle-analyzer .tmp/stats.json",
     "preverify": "npm run build",
     "verify": "npm run verify:bundlesize",
-    "verify:bundlesize": "bundlesize"
+    "verify:bundlesize": "bundlesize",
+    "test": "jest",
+    "test:dev": "jest --watch"
   },
   "lint-staged": {
     "*.js": [
@@ -55,7 +57,10 @@
     "@commitlint/cli": "^8.1.0",
     "@commitlint/config-conventional": "^8.1.0",
     "@commitlint/prompt-cli": "^8.1.0",
+    "@testing-library/jest-dom": "^4.1.0",
+    "@testing-library/react": "^9.1.4",
     "babel-eslint": "^10.0.3",
+    "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
     "bundlesize": "^0.18.0",
     "clean-webpack-plugin": "^3.0.0",
@@ -72,6 +77,7 @@
     "file-loader": "^4.2.0",
     "html-webpack-plugin": "^3.2.0",
     "husky": "^3.0.2",
+    "jest": "^24.9.0",
     "lint-staged": "^9.2.1",
     "mini-css-extract-plugin": "^0.8.0",
     "npm-run-all": "^4.1.5",
