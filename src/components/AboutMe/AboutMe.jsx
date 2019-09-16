@@ -49,7 +49,7 @@ const AboutMe = () => {
           <section>
             <h3>
               <strong>Front-End Engineer Consultant </strong>
-              <span>(ING. Apr 16 – Dec 18)</span>
+              <span>(ING. Jan 19 – Jun 19)</span>
             </h3>
             <p>
               I worked remote exclusively, so I became an external consultant to
@@ -62,7 +62,7 @@ const AboutMe = () => {
           <section>
             <h3>
               <strong>Front-End Engineer / Teach Lead </strong>
-              <span>(ING. Jan – Jun 2019)</span>
+              <span>(ING. Apr 16 – Dec 18)</span>
             </h3>
             <p>
               I worked as the principal developer working on maintaining the
