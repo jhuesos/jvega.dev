@@ -2,23 +2,16 @@ import React from 'react';
 
 import Chip from './Chip';
 import ProgressBar from './ProgressBar';
+import { ProfilePicImage } from '../../helpers/images';
 
 import './AboutMe.css';
-
-import profilePic200 from '../../../static/images/profile-pic-200.jpg';
-import profilePic300 from '../../../static/images/profile-pic-300.jpg';
-import profilePic400 from '../../../static/images/profile-pic-400.jpg';
-import profilePic200webp from '../../../static/images/profile-pic-200.webp';
-import profilePic300webp from '../../../static/images/profile-pic-300.webp';
-import profilePic400webp from '../../../static/images/profile-pic-400.webp';
-
 import profileIcon from '../../../static/icons/profile.svg';
 import bookIcon from '../../../static/icons/book.svg';
 
 const AboutMe = () => {
   return (
-    <article className="about-me">
-      <div className="education-experience-container">
+    <article className="about-me content">
+      <div className="left-column">
         <h2>Hello!</h2>
         <p>
           I am a front-end engineer, proactive, creative problem solver, and
@@ -151,26 +144,10 @@ const AboutMe = () => {
           </h3>
         </section>
       </div>
-      <div className="skills-container">
+
+      <div className="right-column">
         <div className="profile-pic-container">
-          <picture>
-            <source
-              type="image/webp"
-              srcSet={`${profilePic400webp} 400w, ${profilePic300webp} 300w, ${profilePic200webp} 200w`}
-              sizes="(max-width: 500px) 100vw, 20vw"
-            />
-            <source
-              type="image/jpeg"
-              srcSet={`${profilePic400} 400w, ${profilePic300} 300w, ${profilePic200} 200w`}
-              sizes="(max-width: 500px) 100vw, 20vw"
-            />
-            <img
-              src={profilePic400}
-              srcSet={`${profilePic400} 400w, ${profilePic300} 300w, ${profilePic200} 200w`}
-              sizes="(max-width: 500px) 100vw, 20vw"
-              alt="Jaime Vega's face"
-            />
-          </picture>
+          <ProfilePicImage />
         </div>
         <section>
           <h2>Skills</h2>
