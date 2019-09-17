@@ -4,13 +4,19 @@ import { SecurityHeaderImage } from '../../helpers/images';
 
 import './AboutThisPage.css';
 
+import reactLogo from '../../../static/icons/react.svg';
+import webpackLogo from '../../../static/icons/webpack.svg';
+import babelLogo from '../../../static/icons/babel.svg';
+import eslintLogo from '../../../static/icons/eslint.svg';
+import pwaLogo from '../../../static/icons/pwa.svg';
+import postcssLogo from '../../../static/icons/postcss.svg';
+import prettierLogo from '../../../static/icons/prettier.svg';
+import lighthouseLogo from '../../../static/icons/lighthouse.svg';
+
 const AboutThisPage = () => {
   return (
     <article className="about-thispage content">
       <div className="left-column">
-        <header>
-          <h2>About this page</h2>
-        </header>
         <p>
           In this section you can learn about the features and technologies I
           used to build this website. But first, two things:
@@ -43,11 +49,11 @@ const AboutThisPage = () => {
         </ul>
 
         <section>
-          <h3>Security</h3>
+          <h2>Security</h2>
           <p>
             This website is trying to follow the latest and greatest security
             standards available on the market. So the site has achieved and
-            security score of A+ according to the
+            security score of A+ according to the&nbsp;
             <a
               href="https://securityheaders.com/?q=www.jvega.dev&followRedirects=on"
               target="_blank"
@@ -61,12 +67,78 @@ const AboutThisPage = () => {
             <SecurityHeaderImage />
           </div>
         </section>
+        <section>
+          <h2>Performance</h2>
+          <p>Performance</p>
+        </section>
+        <section>
+          <h2>Progressive Web Application (PWA)</h2>
+          <p>Coming soon...</p>
+        </section>
       </div>
 
       <div className="right-column">
         <section>
           <h2>Stack</h2>
-          <p>TEchnology stack...</p>
+          <p>
+            <img
+              className="stack-logo"
+              src={reactLogo}
+              alt="React logo"
+            />
+          </p>
+          <p>
+            <img
+              className="stack-logo"
+              src={webpackLogo}
+              alt="Webpack logo"
+            />
+          </p>
+          <p>
+            <img
+              className="stack-logo"
+              src={babelLogo}
+              alt="Babel logo"
+            />
+          </p>
+          <p>
+            <img
+              className="stack-logo"
+              src={eslintLogo}
+              alt="Eslint logo"
+            />
+          </p>
+          <p>
+            <img
+              className="stack-logo"
+              src={pwaLogo}
+              alt="PWA logo"
+              style={{height: '70px', margin: '24px 0'}}
+            />
+          </p>
+          <p>
+            <img
+              className="stack-logo"
+              src={postcssLogo}
+              alt="PostCSS logo"
+              style={{margin: '24px 0'}}
+            />
+          </p>
+          <p>
+            <img
+              className="stack-logo"
+              src={prettierLogo}
+              alt="Prettier logo"
+            />
+          </p>
+          <p>
+            <img
+              className="stack-logo"
+              src={lighthouseLogo}
+              alt="Lighthouse logo"
+              style={{height: '120px'}}
+            />
+          </p>
         </section>
       </div>
     </article>
