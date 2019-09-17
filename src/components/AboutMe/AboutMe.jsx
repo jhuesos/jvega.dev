@@ -14,11 +14,20 @@ import profilePic400webp from '../../../static/images/profile-pic-400.webp';
 
 import profileIcon from '../../../static/icons/profile.svg';
 import bookIcon from '../../../static/icons/book.svg';
+import ResponsiveImage from '../shared/ResponsiveImage';
+
+const imagesInfo = {
+  sizes: [200, 300, 400],
+  filesJpg: [profilePic200, profilePic300, profilePic400],
+  filesWebp: [profilePic200webp, profilePic300webp, profilePic400webp],
+  alt: `Jaime Vega's face`,
+  sizesCalc: '(max-width: 500px) 100vw, 20vw',
+};
 
 const AboutMe = () => {
   return (
-    <article className="about-me">
-      <div className="education-experience-container">
+    <article className="about-me content">
+      <div className="left-column">
         <h2>Hello!</h2>
         <p>
           I am a front-end engineer, proactive, creative problem solver, and
@@ -151,26 +160,16 @@ const AboutMe = () => {
           </h3>
         </section>
       </div>
-      <div className="skills-container">
+
+      <div className="right-column">
         <div className="profile-pic-container">
-          <picture>
-            <source
-              type="image/webp"
-              srcSet={`${profilePic400webp} 400w, ${profilePic300webp} 300w, ${profilePic200webp} 200w`}
-              sizes="(max-width: 500px) 100vw, 20vw"
-            />
-            <source
-              type="image/jpeg"
-              srcSet={`${profilePic400} 400w, ${profilePic300} 300w, ${profilePic200} 200w`}
-              sizes="(max-width: 500px) 100vw, 20vw"
-            />
-            <img
-              src={profilePic400}
-              srcSet={`${profilePic400} 400w, ${profilePic300} 300w, ${profilePic200} 200w`}
-              sizes="(max-width: 500px) 100vw, 20vw"
-              alt="Jaime Vega's face"
-            />
-          </picture>
+          <ResponsiveImage
+            alt={imagesInfo.alt}
+            sizesCalc={imagesInfo.sizesCalc}
+            sizes={imagesInfo.sizes}
+            filesJpg={imagesInfo.filesJpg}
+            filesWebp={imagesInfo.filesWebp}
+          />
         </div>
         <section>
           <h2>Skills</h2>
