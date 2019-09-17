@@ -4,4 +4,4 @@ dist/
 .env
 yarn-error.log
 coverage
-static/images/to-process/
+scripts/process-images/to-process/
