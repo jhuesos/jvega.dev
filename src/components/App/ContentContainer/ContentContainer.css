@@ -1,0 +1,35 @@
+.content {
+  display: flex;
+}
+
+.left-column {
+  padding: 24px;
+  margin-right: 0;
+  flex: 2 1;
+  background-color: var(--content-background-color);
+}
+
+.right-column {
+  flex: 1 1;
+  padding: 0 0 0 24px;
+}
+
+@media (min-width: 501px) and (max-width: 767px) {
+  .right-column {
+    padding: 0 0 0 16px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 500px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .left-column {
+    padding: 12px;
+  }
+
+  .right-column {
+    padding: 12px 12px 0 12px;
+  }
+}

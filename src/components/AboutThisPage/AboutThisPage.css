@@ -1,0 +1,14 @@
+.left-column-image {
+  width: 100%;
+  padding: 16px 32px;
+}
+
+.left-column-image img {
+  width: 100%;
+}
+
+@media (min-width: 320px) and (max-width: 500px) {
+  .left-column-image {
+    padding: 12px 0;
+  }
+}

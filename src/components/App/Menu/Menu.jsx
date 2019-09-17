@@ -16,11 +16,12 @@ export default function Menu() {
         About me
       </A>
 
-      {/* Links with no href work as disable links. HREF was removed on purpose */}
-      {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-      <a aria-current={currentPath === '/about-thispage' ? 'page' : ''}>
+      <A
+        href="/about-thispage"
+        aria-current={currentPath === '/about-thispage' ? 'page' : ''}
+      >
         About this page
-      </a>
+      </A>
 
       <a
         href="https://github.com/jhuesos/jvega.dev"

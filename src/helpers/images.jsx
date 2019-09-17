@@ -52,7 +52,7 @@ const getResponsiveImage = (imageName, alt, sizesCalc) => {
 export const SecurityHeaderImage = () => {
   return getResponsiveImage(
     'security-headers',
-    'alt value',
+    'A+ score that the jvega.dev website obtained in the website securityheaders.com',
     '(max-width: 500px) 100vw, 66vw',
   );
 };
