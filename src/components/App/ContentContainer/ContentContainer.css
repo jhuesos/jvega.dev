@@ -2,6 +2,13 @@
   display: flex;
 }
 
+.content a,
+.content a:link,
+.content a:visited,
+.content a:active {
+  text-decoration: underline;
+}
+
 .left-column {
   padding: 24px;
   margin-right: 0;

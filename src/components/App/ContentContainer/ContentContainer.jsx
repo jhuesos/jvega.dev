@@ -10,7 +10,9 @@ const AboutMe = lazy(() =>
 );
 
 const AboutThisPage = lazy(() =>
-  import(/* webpackChunkName:'AboutThisPage' */ '../../AboutThisPage'),
+  import(
+    /* webpackPrefetch: true, webpackChunkName:'AboutThisPage' */ '../../AboutThisPage'
+  ),
 );
 
 const routes = {

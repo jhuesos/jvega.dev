@@ -64,3 +64,11 @@ export const ProfilePicImage = () => {
     '(max-width: 500px) 100vw, 20vw',
   );
 };
+
+export const PerformanceScoreImage = () => {
+  return getResponsiveImage(
+    'performance-score',
+    'The performance score obtained from the web.dev website. The value it shows is 97',
+    '(max-width: 500px) 100vw, 66vw',
+  );
+};
