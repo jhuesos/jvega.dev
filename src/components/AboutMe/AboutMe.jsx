@@ -2,27 +2,11 @@ import React from 'react';
 
 import Chip from './Chip';
 import ProgressBar from './ProgressBar';
+import { ProfilePicImage } from '../../helpers/images';
 
 import './AboutMe.css';
-
-import profilePic200 from '../../../static/images/profile-pic-200.jpg';
-import profilePic300 from '../../../static/images/profile-pic-300.jpg';
-import profilePic400 from '../../../static/images/profile-pic-400.jpg';
-import profilePic200webp from '../../../static/images/profile-pic-200.webp';
-import profilePic300webp from '../../../static/images/profile-pic-300.webp';
-import profilePic400webp from '../../../static/images/profile-pic-400.webp';
-
 import profileIcon from '../../../static/icons/profile.svg';
 import bookIcon from '../../../static/icons/book.svg';
-import ResponsiveImage from '../shared/ResponsiveImage';
-
-const imagesInfo = {
-  sizes: [200, 300, 400],
-  filesJpg: [profilePic200, profilePic300, profilePic400],
-  filesWebp: [profilePic200webp, profilePic300webp, profilePic400webp],
-  alt: `Jaime Vega's face`,
-  sizesCalc: '(max-width: 500px) 100vw, 20vw',
-};
 
 const AboutMe = () => {
   return (
@@ -163,13 +147,7 @@ const AboutMe = () => {
 
       <div className="right-column">
         <div className="profile-pic-container">
-          <ResponsiveImage
-            alt={imagesInfo.alt}
-            sizesCalc={imagesInfo.sizesCalc}
-            sizes={imagesInfo.sizes}
-            filesJpg={imagesInfo.filesJpg}
-            filesWebp={imagesInfo.filesWebp}
-          />
+          <ProfilePicImage />
         </div>
         <section>
           <h2>Skills</h2>
