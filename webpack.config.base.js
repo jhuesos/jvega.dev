@@ -2,12 +2,15 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const PreloadWebpackPlugin = require('preload-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
+
+const outputPath = path.join(__dirname, './dist');
 
 module.exports = {
   entry: path.join(__dirname, './src/index.js'),
 
   output: {
-    path: path.join(__dirname, './dist'),
+    path: outputPath,
     filename: '[name].[contenthash].min.js',
   },
 
@@ -102,5 +105,17 @@ module.exports = {
       // elements to the index.html. We use this plugin to do that
       include: ['email-icon', 'home-icon', 'home-icon', 'ReactApp', 'Menu'],
     }),
+    new CopyPlugin([
+      {
+        from: path.join(__dirname, './static/icons'),
+        to: path.join(outputPath, './static/icons'),
+        toType: 'dir',
+      },
+      {
+        from: path.join(__dirname, './src/manifest.json'),
+        to: path.join(outputPath, 'manifest.json'),
+        toType: 'file',
+      },
+    ]),
   ],
 };
