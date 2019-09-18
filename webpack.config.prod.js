@@ -36,7 +36,7 @@ module.exports = merge(baseConfig, {
         toType: 'file',
       },
       {
-        from: path.join(__dirname, 'robots.txt'),
+        from: path.join(__dirname, './src/robots.txt'),
         to: path.join(outputPath, 'robots.txt'),
         toType: 'file',
       },
