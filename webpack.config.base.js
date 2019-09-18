@@ -107,8 +107,8 @@ module.exports = {
     }),
     new CopyPlugin([
       {
-        from: path.join(__dirname, './static/icons'),
-        to: path.join(outputPath, './static/icons'),
+        from: path.join(__dirname, './static/logo'),
+        to: path.join(outputPath, './static/logo'),
         toType: 'dir',
       },
       {
