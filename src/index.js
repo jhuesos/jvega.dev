@@ -41,3 +41,9 @@ function loadCriticalPathResources() {
 // Delay loading icons as are not critical for the user experience. I aim
 // to reduce the time to first content paint.
 setTimeout(loadCriticalPathResources, 20);
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js');
+  });
+}

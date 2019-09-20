@@ -5,6 +5,7 @@ const TerserJSPlugin = require('terser-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const merge = require('webpack-merge');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const { InjectManifest } = require('workbox-webpack-plugin');
 const { env } = require('process');
 
 const baseConfig = require('./webpack.config.base.js');
@@ -41,6 +42,15 @@ module.exports = merge(baseConfig, {
         toType: 'file',
       },
     ]),
+    new InjectManifest({
+      swSrc: './src/sw.js',
+      globPatterns: [
+        path.join(outputPath, './*.{js,svg,html,css,webp,jpg}'),
+        path.join(outputPath, './manifest.json'),
+        path.join(outputPath, './static/logo/*'),
+      ],
+      exclude: ['_headers', '_redirects', 'robots.txt'],
+    }),
     isAnalyzeBundleEnabled && new BundleAnalyzerPlugin(),
   ].filter(plugin => !!plugin),
 
