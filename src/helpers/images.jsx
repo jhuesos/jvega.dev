@@ -53,7 +53,7 @@ export const SecurityHeaderImage = () => {
   return getResponsiveImage(
     'security-headers',
     'A+ score that the jvega.dev website obtained in the website securityheaders.com',
-    '(max-width: 500px) 100vw, 66vw',
+    '(max-width: 559px) 100vw, 66vw',
   );
 };
 
@@ -61,7 +61,7 @@ export const ProfilePicImage = () => {
   return getResponsiveImage(
     'profile-pic',
     `Jaime Vega's face`,
-    '(max-width: 500px) 100vw, 20vw',
+    '(max-width: 559px) 100vw, 20vw',
   );
 };
 
@@ -69,6 +69,6 @@ export const PerformanceScoreImage = () => {
   return getResponsiveImage(
     'performance-score',
     'The performance score obtained from the web.dev website. The value it shows is 97',
-    '(max-width: 500px) 100vw, 66vw',
+    '(max-width: 559px) 100vw, 66vw',
   );
 };
