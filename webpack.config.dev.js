@@ -2,6 +2,8 @@ require('dotenv').config();
 
 const fs = require('fs');
 const merge = require('webpack-merge');
+const { InjectManifest } = require('workbox-webpack-plugin');
+
 const baseConfig = require('./webpack.config.base.js');
 
 module.exports = merge(baseConfig, {
@@ -15,7 +17,8 @@ module.exports = merge(baseConfig, {
     port: 3000,
     host: '0.0.0.0',
     headers: {
-      'Content-Security-Policy': "default-src 'self'; img-src 'self' data:;",
+      'Content-Security-Policy':
+        "default-src 'self'; img-src 'self' data:; script-src 'self' https://storage.googleapis.com/workbox-cdn/;",
       'X-Frame-Options': 'DENY',
       'X-XSS-Protection': '1; mode=block',
       'X-Content-Type-Options': 'nosniff',
@@ -29,4 +32,10 @@ module.exports = merge(baseConfig, {
     },
     stats: 'minimal',
   },
+
+  plugins: [
+    new InjectManifest({
+      swSrc: './src/sw.js',
+    }),
+  ],
 });
