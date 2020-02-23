@@ -4,7 +4,7 @@ import ResponsiveImage from '../components/shared/ResponsiveImage';
 const importAll = require =>
   require.keys().reduce((acc, next) => {
     // eslint-disable-next-line import/no-dynamic-require
-    acc[next.replace('./', '')] = require(next);
+    acc[next.replace('./', '')] = require(next).default;
     return acc;
   }, {});
 
