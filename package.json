@@ -102,7 +102,7 @@
     "workbox-webpack-plugin": "4.3.1"
   },
   "dependencies": {
-    "core-js": "3.6.4",
+    "core-js": "3.6.5",
     "hookrouter": "1.2.3",
     "prop-types": "15.7.2",
     "react": "16.13.1",
