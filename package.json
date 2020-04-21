@@ -85,7 +85,7 @@
     "postcss-custom-properties": "9.1.1",
     "postcss-loader": "3.0.0",
     "preload-webpack-plugin": "3.0.0-beta.4",
-    "prettier": "2.0.4",
+    "prettier": "2.0.5",
     "remark-cli": "8.0.0",
     "remark-preset-lint-recommended": "4.0.0",
     "style-loader": "1.1.3",
