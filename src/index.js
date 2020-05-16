@@ -42,8 +42,16 @@ function loadCriticalPathResources() {
 // to reduce the time to first content paint.
 setTimeout(loadCriticalPathResources, 20);
 
+// FIXME: Temporary disabling SW
 if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js');
+  // window.addEventListener('load', () => {
+  //   navigator.serviceWorker.register('/sw.js');
+  // });
+
+  /* eslint-disable no-restricted-syntax, prefer-const */
+  navigator.serviceWorker.getRegistrations().then(registrations => {
+    for (let registration of registrations) {
+      registration.unregister();
+    }
   });
 }
