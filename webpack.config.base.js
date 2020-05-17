@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const PreloadWebpackPlugin = require('preload-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const { EnvironmentPlugin } = require('webpack');
 
 const outputPath = path.join(__dirname, './dist');
 
@@ -91,6 +92,9 @@ module.exports = {
   },
 
   plugins: [
+    new EnvironmentPlugin({
+      GA_ID: 'NOT_SET',
+    }),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
       chunkFilename: '[name].[contenthash].css',

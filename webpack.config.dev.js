@@ -18,7 +18,7 @@ module.exports = merge(baseConfig, {
     host: '0.0.0.0',
     headers: {
       'Content-Security-Policy':
-        "default-src 'self'; img-src 'self' data:; script-src 'self' https://storage.googleapis.com/workbox-cdn/;",
+        "default-src 'self'; img-src 'self' data: https://www.google-analytics.com/; script-src 'self' https://storage.googleapis.com/workbox-cdn/ https://www.google-analytics.com/;",
       'X-Frame-Options': 'DENY',
       'X-XSS-Protection': '1; mode=block',
       'X-Content-Type-Options': 'nosniff',

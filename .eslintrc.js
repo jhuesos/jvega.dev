@@ -1,4 +1,4 @@
 module.exports = {
-  extends: ['airbnb', 'prettier'],
+  extends: ['airbnb', 'plugin:react-hooks/recommended', 'prettier'],
   parser: 'babel-eslint',
 };

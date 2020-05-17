@@ -1,15 +1,21 @@
 import 'regenerator-runtime/runtime';
 import React, { lazy, Suspense, useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
-import { usePath } from 'hookrouter';
+import { usePath, useInterceptor } from 'hookrouter';
+import ReactGA from 'react-ga';
 
 import './App.css';
+
+const IS_PRODUCTION = process.env.NODE_ENV === 'production';
+const { GA_ID } = process.env;
 
 const Menu = lazy(() =>
   import(/* webpackPreload: true,  webpackChunkName: 'Menu' */ './Menu'),
 );
 const ContentContainer = lazy(() =>
-  import(/* webpackPrefetch: true, webpackChunkName: 'ContentContainer' */ './ContentContainer'),
+  import(
+    /* webpackPrefetch: true, webpackChunkName: 'ContentContainer' */ './ContentContainer'
+  ),
 );
 
 const useDocumentExpanded = () => {
@@ -21,6 +27,19 @@ const useDocumentExpanded = () => {
   }
 };
 
+const useAnalytics = () => {
+  useEffect(() => {
+    ReactGA.initialize(GA_ID, { debug: !IS_PRODUCTION });
+    ReactGA.pageview(document.location.pathname);
+  }, []);
+
+  const interceptFunction = (_, nextPath) => {
+    ReactGA.pageview(nextPath);
+    return nextPath;
+  };
+  useInterceptor(interceptFunction);
+};
+
 const App = () => {
   const [isAppLoaded, setIsAppLoaded] = useState(false);
 
@@ -30,6 +49,7 @@ const App = () => {
 
   const isHomePage = usePath() === '/';
   useDocumentExpanded();
+  useAnalytics();
 
   return (
     <div className={`app${!isHomePage ? ' expanded' : ''}`}>
