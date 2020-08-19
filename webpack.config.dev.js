@@ -1,7 +1,7 @@
 require('dotenv').config();
 
 const fs = require('fs');
-const merge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 const { InjectManifest } = require('workbox-webpack-plugin');
 
 const baseConfig = require('./webpack.config.base.js');
