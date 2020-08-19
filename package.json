@@ -50,12 +50,20 @@
       "remark-preset-lint-recommended"
     ]
   },
+  "resolutions": {
+    "optimize-css-assets-webpack-plugin/**/minimist": "^0.2.1",
+    "commitizen/**/lodash": "^4.17.9",
+    "@commitlint/config-conventional/**/dot-prop": "^4.2.1",
+    "optimize-css-assets-webpack-plugin/**/lodash": "^4.17.9",
+    "webpack-dev-server/http-proxy-middleware/http-proxy": "^1.18.1",
+    "postcss-custom-properties/**/is-url-superb": "^4.0.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
     "@babel/preset-react": "^7.9.4",
-    "@commitlint/cli": "^8.3.5",
-    "@commitlint/config-conventional": "^8.3.4",
+    "@commitlint/cli": "^9.0.0",
+    "@commitlint/config-conventional": "^9.0.0",
     "@testing-library/jest-dom": "^5.7.0",
     "@testing-library/react": "^10.0.4",
     "babel-eslint": "^10.1.0",
@@ -64,8 +72,8 @@
     "bundlesize": "^0.18.0",
     "clean-webpack-plugin": "^3.0.0",
     "commitizen": "^4.1.2",
-    "copy-webpack-plugin": "^5.1.1",
-    "css-loader": "^3.5.3",
+    "copy-webpack-plugin": "^6.0.0",
+    "css-loader": "^4.2.1",
     "dotenv": "^8.2.0",
     "eslint": "^7.0.0",
     "eslint-config-airbnb": "^18.1.0",
@@ -79,7 +87,7 @@
     "husky": "^4.2.5",
     "jest": "^26.0.1",
     "lint-staged": "^10.2.2",
-    "mini-css-extract-plugin": "^0.9.0",
+    "mini-css-extract-plugin": "^0.10.0",
     "npm-run-all": "^4.1.5",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "postcss-custom-properties": "^9.1.1",
@@ -91,14 +99,14 @@
     "style-loader": "^1.2.1",
     "stylelint": "^13.3.3",
     "stylelint-config-recommended": "^3.0.0",
-    "svg-url-loader": "^5.0.0",
-    "terser-webpack-plugin": "^3.0.1",
+    "svg-url-loader": "^6.0.0",
+    "terser-webpack-plugin": "^4.1.0",
     "url-loader": "^4.1.0",
     "webpack": "^4.43.0",
     "webpack-bundle-analyzer": "^3.7.0",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.11.0",
-    "webpack-merge": "^4.2.2",
+    "webpack-merge": "^5.1.2",
     "workbox-webpack-plugin": "^4.3.1"
   },
   "dependencies": {
@@ -107,7 +115,7 @@
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-ga": "^2.7.0",
-    "regenerator-runtime": "^0.13.5"
+    "react-ga": "^3.1.2",
+    "regenerator-runtime": "^0.13.7"
   }
 }

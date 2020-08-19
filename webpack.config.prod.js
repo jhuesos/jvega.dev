@@ -3,7 +3,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const TerserJSPlugin = require('terser-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const merge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const { InjectManifest } = require('workbox-webpack-plugin');
 const { env } = require('process');
@@ -24,24 +24,26 @@ module.exports = merge(baseConfig, {
 
   plugins: [
     new CleanWebpackPlugin(),
-    new CopyPlugin([
-      // Netlify custom headers file and redirects
-      {
-        from: path.join(__dirname, '_headers'),
-        to: path.join(outputPath, '_headers'),
-        toType: 'file',
-      },
-      {
-        from: path.join(__dirname, '_redirects'),
-        to: path.join(outputPath, '_redirects'),
-        toType: 'file',
-      },
-      {
-        from: path.join(__dirname, './src/robots.txt'),
-        to: path.join(outputPath, 'robots.txt'),
-        toType: 'file',
-      },
-    ]),
+    new CopyPlugin({
+      patterns: [
+        // Netlify custom headers file and redirects
+        {
+          from: path.join(__dirname, '_headers'),
+          to: path.join(outputPath, '_headers'),
+          toType: 'file',
+        },
+        {
+          from: path.join(__dirname, '_redirects'),
+          to: path.join(outputPath, '_redirects'),
+          toType: 'file',
+        },
+        {
+          from: path.join(__dirname, './src/robots.txt'),
+          to: path.join(outputPath, 'robots.txt'),
+          toType: 'file',
+        },
+      ],
+    }),
     new InjectManifest({
       swSrc: './src/sw.js',
       globPatterns: [

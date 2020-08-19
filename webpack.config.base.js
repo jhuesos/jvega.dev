@@ -109,17 +109,19 @@ module.exports = {
       // elements to the index.html. We use this plugin to do that
       include: ['email-icon', 'home-icon', 'home-icon', 'ReactApp', 'Menu'],
     }),
-    new CopyPlugin([
-      {
-        from: path.join(__dirname, './static/logo'),
-        to: path.join(outputPath, './static/logo'),
-        toType: 'dir',
-      },
-      {
-        from: path.join(__dirname, './src/manifest.json'),
-        to: path.join(outputPath, 'manifest.json'),
-        toType: 'file',
-      },
-    ]),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: path.join(__dirname, './static/logo'),
+          to: path.join(outputPath, './static/logo'),
+          toType: 'dir',
+        },
+        {
+          from: path.join(__dirname, './src/manifest.json'),
+          to: path.join(outputPath, 'manifest.json'),
+          toType: 'file',
+        },
+      ],
+    }),
   ],
 };
