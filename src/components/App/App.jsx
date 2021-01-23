@@ -54,7 +54,8 @@ const App = () => {
   return (
     <div className={`app${!isHomePage ? ' expanded' : ''}`}>
       <div className="navigation-container">
-        {isAppLoaded && (
+        {/* Temporary disabling app content */}
+        {false && isAppLoaded && (
           <Suspense fallback={null}>
             <Menu />
           </Suspense>
