@@ -1,0 +1,65 @@
+:root {
+  --accent-color: #5addf3;
+  --accent-background-color: #0b8296;
+  --page-background-color: #191919;
+  --content-background-color: #525659;
+  --text-color: #fff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--page-background-color);
+  color: var(--text-color);
+  margin: 0;
+  font-size: 1.6rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a,
+a:link,
+a:visited,
+a:active {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+a[href]:hover {
+  text-decoration: underline;
+}
+
+a:not([href]) {
+  text-decoration: line-through;
+}
+
+a:not([href]):hover {
+  cursor: not-allowed;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: normal;
+}
+
+p {
+  margin: 0;
+}
+
+address {
+  font-style: normal;
+}

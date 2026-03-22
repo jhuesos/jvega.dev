@@ -1,0 +1,70 @@
+.content {
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px;
+  gap: 24px;
+}
+
+.leftColumn {
+  flex: 3;
+
+  & h2 {
+    margin-top: 24px;
+    font-size: 2rem;
+  }
+
+  & h3 {
+    margin-top: 12px;
+  }
+
+  & p {
+    margin-top: 8px;
+    line-height: 1.6;
+  }
+
+  & section {
+    margin-top: 16px;
+  }
+}
+
+.rightColumn {
+  flex: 2;
+
+  & h2 {
+    margin-top: 24px;
+    font-size: 2rem;
+  }
+
+  & h3 {
+    margin-top: 12px;
+  }
+
+  & p {
+    margin-top: 8px;
+    line-height: 1.6;
+  }
+}
+
+.profilePicContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.profilePic {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.iconImg {
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+@media (width <= 767px) {
+  .content {
+    flex-direction: column;
+  }
+}
