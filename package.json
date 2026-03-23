@@ -35,8 +35,6 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^2.4.8",
-    "@commitlint/cli": "^20.5.0",
-    "@commitlint/config-conventional": "^20.5.0",
     "@next/bundle-analyzer": "^16.2.1",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",

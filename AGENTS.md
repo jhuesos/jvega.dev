@@ -44,7 +44,6 @@ jvega.dev — Personal portfolio site for Jaime Vega, Front-end Engineer / Tech 
 ## Conventions
 
 - All components are Server Components by default; only add `'use client'` when truly needed
-- Conventional Commits enforced via commitlint (feat:, fix:, chore:, etc.)
 - Pre-commit hooks run lint-staged (Biome for TS/TSX, stylelint for CSS)
 - Images use `next/image` — never manual `<img>` tags
 - No Tailwind CSS — styling uses CSS Modules with real CSS. This is intentional.
