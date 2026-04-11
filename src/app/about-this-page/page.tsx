@@ -1,12 +1,7 @@
-import type { Metadata } from 'next';
 import { Header } from '@/components/Header/Header';
 import styles from './page.module.css';
 
-export const metadata: Metadata = {
-  title: 'About This Page',
-  description:
-    'Learn about the technology stack and tools used to build jvega.dev.',
-};
+export { metadata } from './metadata';
 
 export default function AboutThisPage() {
   return (

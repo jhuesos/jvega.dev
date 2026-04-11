@@ -1,0 +1,39 @@
+# Jaime Vega — jvega.dev
+
+> Personal portfolio of Jaime Vega, Front-end Engineer and Tech Lead based in Amsterdam.
+
+Jaime Vega is a senior front-end engineer and tech lead with over a decade of experience
+building large-scale web applications. He has worked at ING and Thunderhead, leading UI
+engineering teams and driving frontend technology strategy.
+
+## Pages
+
+- [Home](https://www.jvega.dev): Landing page with contact information.
+- [About Me](https://www.jvega.dev/about-me): Professional background, work experience, skills, and education.
+- [About This Page](https://www.jvega.dev/about-this-page): Technology stack used to build jvega.dev.
+
+## Contact
+
+- Email: jaime.vega@gmail.com
+- LinkedIn: https://linkedin.com/in/jvegadev
+- GitHub: https://github.com/jhuesos
+- Website: https://www.jvega.dev
+
+## Skills
+
+JavaScript, TypeScript, React, Node.js, Vue, Web Components, Progressive Web Apps (PWA),
+Redux, HTML, CSS, CSS Modules, Webpack, Git
+
+## Experience
+
+- Front-End Engineer Consultant — ING (2019)
+- Front-End Engineer / Tech Lead — ING (2016–2018)
+- Team Lead / Scrum Master — Thunderhead (2015–2016)
+- Senior Front-End Engineer — Thunderhead (2012–2016)
+- Lead Front-End Engineer — Casengo (2011–2012)
+- Full Stack Engineer — Livecom (2011)
+- Web Development / IT Support — Feyecon (2010–2011)
+
+## Education
+
+Master's degree in Computer Engineering — University of Las Palmas de Gran Canaria, Spain (2010)
