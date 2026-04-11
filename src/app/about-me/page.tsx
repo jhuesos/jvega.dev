@@ -1,4 +1,3 @@
-import type { Metadata } from 'next';
 import Image from 'next/image';
 import { Chip } from '@/components/Chip/Chip';
 import { Disclaimer } from '@/components/Disclaimer/Disclaimer';
@@ -6,11 +5,7 @@ import { Header } from '@/components/Header/Header';
 import { ProgressBar } from '@/components/ProgressBar/ProgressBar';
 import styles from './page.module.css';
 
-export const metadata: Metadata = {
-  title: 'About Me',
-  description:
-    'Learn about Jaime Vega, front-end engineer and tech lead from Amsterdam.',
-};
+export { metadata } from './metadata';
 
 export default function AboutMe() {
   return (
