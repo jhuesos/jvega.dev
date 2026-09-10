@@ -51,7 +51,7 @@
     "stylelint": "^17.7.0",
     "stylelint-config-standard": "^40.0.0",
     "typescript": "^6.0.2",
-    "vitest": "^4.1.4"
+    "vitest": "^4.1.11"
   },
   "pnpm": {
     "overrides": {
